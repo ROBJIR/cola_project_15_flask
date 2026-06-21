@@ -13,6 +13,7 @@
 .menu {
     position: relative;
     display: inline-block;
+    background-color: #fff;
 }
 
 .menu-btn {
@@ -22,8 +23,12 @@
     color: #999;
     border: none;
     cursor: pointer;
+    background: #fff;
 }
-
+.menu-btn:hover {
+	background: #fff;
+	color: #999;
+}
 .menu-content {
     display: none;
     position: absolute;
@@ -40,7 +45,7 @@
 }
 
 .menu-content a:hover {
-    background-color: #eee;
+    background-color: #fff;
     color: #800;
 }
 

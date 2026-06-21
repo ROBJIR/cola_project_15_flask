@@ -65,7 +65,10 @@ body {
 .footer {
 	padding: 10px 20px 10px 20px;
 	margin: 0px;
-	border: 0px solid #666;
+    border-top:    1px solid #999;
+    border-right:  0;
+    border-bottom: 0;
+    border-left:   0;
 	color: #999;
 	font-size: 0.8em;
 	display: flex;
@@ -131,12 +134,16 @@ details {
 	padding: 12px 0 12px 0;
 }
 
-.form {
-	border: 0px solid #ccc;
+form {
+	text-align: center;
+	background: #fff;
+	font-family: sans-serif;
+	flex-direction: column;
 	padding: 0px;
+	border: 0px solid #800;
 }
 
-form {
+.niceform {
 	text-align: left;
 	background: #fff;
 	font-family: sans-serif;
@@ -146,6 +153,7 @@ form {
 	border: 1px solid #ccc;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
 label {
 	display: block;
 	padding-bottom: 10px;
@@ -167,15 +175,18 @@ textarea {
 button {
 	background: #666;
 	color: #eee;
+	font-weight: bold;
+	font-size: 1.2em;
 	border-radius: 5px;
 	padding: 20px;
 	border:1px;
-	float: right;
+	float: center;
 	cursor: pointer;
 	transition: 0.5s;
 }
 button:hover {
 	background: #800;
+	color: #fff;
 }
 
 a {
@@ -210,8 +221,8 @@ a:active {
 }
 
 .message_warning {
-	border: 1px solid #DAA520;
-	color: #DAA520;
+	border: 1px solid #b8860b;
+	color: #b8860b;
 	background: #FFDEAD;
 	padding: 20px;
 	margin: 20px 0px 30px 0px;
@@ -223,4 +234,48 @@ a:active {
 	background: #eee;
 	padding: 20px;
 	margin: 20px 0px 30px 0px;
+}
+
+table {
+	border: 0px solid #800;
+	width: 100%;
+	font-size: 0.8em;
+	color: #800;
+	background: #fff;
+	padding: 0px;
+	margin: 0px;
+}
+tr {
+	padding: 0px;
+	margin: 0px;
+}
+th {
+	border: 0px solid #800;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #800;
+	background: #ddd;
+	padding: 4px;
+	margin: 0px;
+	border-top:    0;
+    border-right:  0;
+    border-bottom: 1px solid #999;
+    border-left:   0;
+}
+td {
+	border: 0px solid #800;
+	font-size: 1.oem;
+	color: #000;
+	background: #fff;
+	padding: 4px;
+	margin: 0px;
+	vertical-align: top;
+}
+title {
+	border: 1px solid #999;
+	font-size: 10px;
+	color: #999;
+	background: #eee;
+	padding: 4px;
+	margin: 0px;
 }
