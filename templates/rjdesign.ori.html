@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ project_name }} / {{ page_name }}</title>
+    <link rel="stylesheet" href="./templates/css/style.css">
+	<link rel="stylesheet" href="./templates/css/menu.css">
+
+	<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			html, body {
+				/* Base styles go here */
+				font-family: Calibri, Verdana, Arial, sans-serif;
+				font-size: 16px;
+				background: #fff;
+				color: #222;
+			}
+
+			body {
+				background: #fff;
+				color: #000;
+				border: 0px solid #eee;
+				max-width: 680px;
+				margin: 0 auto;
+				padding: 0px;
+				min-height: 100vh;
+				justify-content: center;  /* horizontálně */
+				align-items: center;      /* vertikálně */
+				padding: 0px;
+			}
+
+			.wrapper {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.main {
+				border: 0px solid #666;
+				min-height: 100%;
+				flex: 1;
+				padding: 20px;
+			}
+			.header {
+				border: 0px solid red;
+				padding: 0px;
+				background: #fff;
+				color: #999;
+				font-size: 1.0em;
+				display: flex;
+				justify-content: center;
+				align-items: bottom;
+			}
+			.header-left{
+				border: 0px solid #666;
+				text-align: left;
+				width: 400px;
+			}
+			.header-center {
+				border: 0px solid #666;
+				text-align: center;
+				width: 200px;
+			}
+			.header-right{
+				border: 0px solid red;
+				text-align: right;
+				width: 80px;
+			}
+
+			.footer {
+				padding: 10px 20px 10px 20px;
+				margin: 0px;
+				border: 0px solid #666;
+				color: #999;
+				font-size: 0.8em;
+				display: flex;
+				justify-content: center;  /* horizontálně */
+				align-items: top;      /* vertikálně */
+			}
+			.footer-left{
+				border: 0px solid #666;
+				text-align: left;
+				width: 200px;
+			}
+			.footer-center {
+			border: 0px solid #666;
+				text-align: center;
+				width: 280px;
+			}
+			.footer-right{
+				border: 0px solid #666;
+				text-align: right;
+				width: 200px;
+			}
+
+			.title {
+				font-size: 1.4em;
+				color: #800;
+				font-weight: bold;
+				border: 0px solid #666;
+				letter-spacing: 5px;
+			}
+
+			.hidiv {
+				border: 0px solid #ccc;
+				font-size: 1.0em;
+				padding: 12px;
+				margin: 4px;
+			}
+
+			h1 {
+				font-size: 2.0em;
+				border: 0px solid #666;
+				color: #ccc;
+				font-weight: bold;
+				text-transform: lowercase;
+			}
+
+			h2 {
+				font-size: 1.2em;
+				border: 0px solid #666;
+				color: #aaa;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			.chapter {
+			}
+
+			.detaila_area {
+				padding: 28px 0 28px 0;
+				border: 0px solid #ccc;
+			}
+
+			details {
+				padding: 12px 0 12px 0;
+			}
+
+			.form {
+				border: 0px solid #ccc;
+				padding: 0px;
+			}
+
+			form {
+				text-align: left;
+				background: #fff;
+				font-family: sans-serif;
+				display: inline-flex;
+				flex-direction: column;
+				padding: 40px;
+				box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+			}
+			label {
+				display: block;
+				padding-bottom: 10px;
+			}
+			input[type=text],
+			input[type=email],
+			textarea {
+				margin-bottom: 20px;
+				box-sizing: border-box;
+				display: block;
+				padding:15px;
+				border:1px solid #aaa;
+				box-shadow: inset 0 2px 2px rgba(0,0,0,.1);
+				width: 500px;
+			}
+			textarea {
+				height: 140px;
+			}
+			button {
+				background: orangered;
+				color: #fff;
+				border-radius: 5px;
+				padding: 20px 50px;
+				border:0;
+				float: right;
+				cursor: pointer;
+				transition: 0.5s;
+			}
+			button:hover {
+				background: crimson;
+			}
+
+			a {
+				color: #000;              /* barva odkazu */
+				text-decoration: none;    /* odstraní podtržení */
+			}
+			a:link {
+				color: #000;              /* normální (nenavštívený) odkaz */
+				text-decoration: underline
+			}
+
+			a:visited {
+				color: #000;            /* již navštívený odkaz */
+				text-decoration: underline
+			}
+
+			a:hover {
+				color: #800;               /* když na něj najedeš myší */
+				text-decoration: none;
+			}
+
+			a:active {
+				color: #000;             /* při kliknutí */
+			}
+
+			.top-menu {
+				padding: 10px;
+				margin: 0px;
+				border: 0px solid blue;
+				color: #999;
+				font-size: 1.0em;
+				display: flex;
+				justify-content: rigth;  /* horizontálně */
+				align-items: bottom;      /* vertikálně */
+			}
+
+			.menu {
+				position: relative;
+				display: inline-block;
+			}
+
+			.menu-btn {
+				padding: 0px;
+				font-size: 3.0em;
+				background-color: #fff;
+				color: #999;
+				border: none;
+				cursor: pointer;
+			}
+
+			.menu-content {
+				display: none;
+				position: absolute;
+				background-color: #fff;
+				min-width: 150px;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+			}
+
+			.menu-content a {
+				display: block;
+				padding: 10px;
+				text-decoration: none;
+				color: #000;
+			}
+
+			.menu-content a:hover {
+				background-color: #eee;
+				color: #800;
+			}
+
+			/* klíčová část */
+			.menu:hover .menu-content {
+				display: block;
+			}
+
+			/* menu line */
+			.line-menu-line {
+				  display: flex;
+				  align-items: bottom;
+				  margin: 0px 0px 0px 10px;
+				  padding: 0px;
+				  border-bottom: 1px solid #999;
+				  }
+
+			.line-menu {
+			  margin: 0px 0;
+			  padding: 0px;
+			  list-style: none;
+			  background: #fff;
+			  display: flex;
+			}
+			.line-menu li {
+			  border: 0px solid blue;
+			  letter-spacing: 2px;
+			}
+
+			.line-menu a {
+			  display: block;
+			  color: #999;
+			  text-decoration: none;
+			  font-weight: bold;
+			  text-transform: lowercase;
+			  padding: 6px 26px 2px 10px;
+			  font-size: 1.0em;
+			  border: 0px solid red;
+			  border-bottom: 0px solid #999;
+			}
+			.line-menu a:hover {
+			  color: #800;
+			  border-bottom: 0px solid #800;
+			  text-decoration: none;
+			}
+			.line-menu-block {
+			  display: block;
+			  text-align: bottom;
+			  color: #666;
+			  text-decoration: none;
+			  font-weight: normal;
+			  text-transform: lowercase;
+			  padding: 6px 26px 2px 10px;
+			  font-size: 11px;
+			  border: 0px solid red;
+			  border-bottom: -2px solid #800;
+			}
+	</style>
+</head>
+<body>
+	<div id="top"></div>
+	<div class="wrapper">
+				<!--
+				  commect - examples
+				-->
+
+		<header class="header">
+				<div class="header-left">
+					<p class="title">{{ project_name }}</p>
+				</div>
+				<div class="header-center">
+					&nbsp;
+				</div>
+				<div class="header-rigth">
+					<div class="top-menu">
+						<div class="menu">
+							<button class="menu-btn">&equiv;</button>
+							<div class="menu-content">
+								<a href="#top">top</a>							
+								<a href="#raketa">Raketa SLS a kosmická loď Orion</a>
+								<a href="#plan">Plán a cíle mise</a>
+								<a href="#bottom">bottom</a>
+
+							</div>
+						</div>
+					</div>
+				</div>					
+		</header>
+		<div class="line-menu-line">
+			<ul class="line-menu">
+			  <li><a href="/">Homepage</a></li>
+			  <li><a href="index.html">About us</a></li>
+			  <li><a href="index.html">Gallery</a></li>
+			  <li><a href="index.html">Contact</a></li>
+			</ul> 		
+		</div>		
+		<div class="main">
+<!--		
+			<div class="form">
+				<form>
+
+				</form>
+			</div>
+-->
+
+<h1>{{ page_name }}</h1>
+<p>
+<strong>Artemis II</strong>(dříve označována jako <strong>Exploration Mission-2</strong>, EM-2) je probíhající druhý let programu Artemis. Jde také o druhý let rakety Space Launch System (SLS) a zároveň první pilotovaný let kosmické lodi Orion. Start se uskutečnil 1. dubna 2026. Při své misi provede čtveřice astronautů tvořících posádku lodi Orion průlet kolem Měsíce. Jedná se o první let s posádkou od Apolla 17 za nízkou oběžnou dráhu Země. Poprvé v historii míří k Měsíci Afroameričan, žena a občan jiné země než USA. Bude také překonán rekord nejvzdálenějšího lidského letu od Země (406 tisíc km). 
+</p>
+<h2 id="raketa">Raketa SLS a kosmická loď Orion</h2>
+<p>
+Pro misi NASA připravila raketu SLS ve verzi Block 1 složenou ze:
+</p><p>
+<ul>
+	<li>
+    centrálního stupně o průměru 8,4 metru a délce 64,6 metru,[2] se čtyřmi motory RS-25D, z nichž 2 dříve létaly na raketoplánech Space Shuttle a 2 byly nově sestaveny z dílů dříve používaných motorů; konkrétně jde o motory s výrobními čísly E2047 (15 letů), E2059 (5 letů), E2062 a E2061, přičemž poslední uvedený kus byl použit jako náhrada za původně instalovaný motor E2063, u něhož se v dubnu 2025 projevila závada na hydraulice,
+    </li><li>
+	dvou pětisegmentových <a href="https://cs.wikipedia.org/wiki/Space_Shuttle_Solid_Rocket_Booster">urychlovacích bloků na pevné palivo</a> (Space Shuttle Solid Rocket Booster, SRB), každý o délce 54 metrů a průměru 3,7 metru,[5] zajímavostí přitom je, že některé z dílů tvořících segmenty boosterů byly poprvé použity už v 80. letech 20. století, ten nejstarší při misi raketoplánu STS-5 v roce 1982,
+    </li><li>
+	a kryogenního druhého stupně (ICPS) s jedním motorem RL-10B-2.
+	</li>
+</ul>
+Velitelská sekce kosmické lodi Orion pro misi Artemis II nese výrobní číslo CM-003. Kuželovitý obytný modul je 3,30 metru vysoký s průměrem 5,03 metrů, vnitřní hermetizovaný prostor dosahuje 19,5 m3.
+</p><p>
+Servisní modul má výrobní číslo ESM-2. Je vysoký 4 metry při průměru 4,10 metru a jsou na něm připojeny čtyři solární panely, každý o rozměrech 7,3 krát 2 metry, jejichž rozpětí po rozložení dosahuje 19 metrů. Panely budou lodi poskytovat 11 kilowattů elektrického výkonu.[7]
+</p><p>
+Loď je vybavena laserovým komunikačním systémem, které oproti předchozím konvenčním radiovým spojením dovoluje používat více typů datových přenosů s vyšší rychlostí.
+</p><p>
+Startovní hmotnost celé lodi včetně paliva dosahuje 32 650 kilogramů, z toho obytný modul 9 350 kg, servisní modul 14 000 kg a startovní záchranný systém 7 600 kg. Výška sestavy rakety SLS a lodi Orion je 98,3 metru a hmotnost dosáhne asi 2 600 tun včetně paliva a necelých 1 600 tun bez něj.
+</p><p>
+Posádka v září 2025 zveřejnila pojmenování, které své kosmické lodi stanovila – Integrity. Integrita je podle posádky základem důvěry, respektu, upřímnosti a pokory napříč posádkou a množstvím inženýrů, techniků, vědců a dalších zapojených lidí. Pojmenování je také poctou rozsáhlému integrovanému úsilí – od více než 300 000 součástí kosmické lodi až po tisíce lidí po celém světě – kteří se kvůli misi musí spojit.[10]
+</p>
+
+<h2 id="plan">Plán a cíle mise</h2>
+<p>
+Cílem mise je provést průlet kolem Měsíce po tzv. dráze volného návratu. Kosmická loď tedy nevstoupí na oběžnou dráhu Měsíce, ale proletí asi 7 tisíc kilometrů nad povrchem jeho odvrácené strany a vlivem měsíční gravitace se vydá na zpáteční cestu.[11] Členové posádky budou mít při nejbližším přiblížení asi 3 hodiny na pozorování Měsíce,[12] který uvidí ve zhruba takové velikosti, jako kdyby si prohlíželi basketbalový míč vzdálený na délku paže.[11] Měsíc při tom bude tvořit překážku pro komunikaci kosmické lodi se Zemí, což způsobí výpadek spojení na 30 až 50 minut.[11]
+</p><p>
+Před splněním hlavního cíle, během prvních 36 hodin letu,[13] však kosmická loď provede jeden oblet Země po vysoké eliptické dráze do vzdálenosti asi 72 tisíc kilometrů od zemského povrchu.[11] Ve čtvrté hodině letu posádka zahájí asi 70minutovou zkoušku manévrovacích schopností lodi, nutných pro spojování s dalšími tělesy při následujících misích, a to včetně testu manuálního ovládání. Jako cíl pro přibližování poslouží ICPS, horní stupeň rakety SLS.[14] Kromě toho astronauti prověří různé systémy lodi, včetně podpory života a komunikace se Zemí prostřednictvím sítě Deep Space Network. Teprve při opětovném přiblížení k Zemi uvedou motory Evropského servisního modulu loď Orion na třídenní trajektorii k Měsíci.[11]
+</p><p>
+Při svém druhém návratu k Zemi – již na cestě od Měsíce – přistávací kabina vstoupí rychlostí zhruba 40 tisíc km/h do atmosféry a přistane v Tichém oceánu nedaleko pobřeží USA. Let Orionu s astronauty po eliptické dráze, k Měsíci a zpět potrvá celkem asi 10 dní.
+</p><p>
+Podobně jako při letu Artemis I se i tentokrát s lodí Orion dostane do vesmíru několik cubesatů, které NASA vybírala v letech 2024 a 2025.
+</p><p>
+<a href="https://cs.wikipedia.org/wiki/Artemis_II">zdroj Wikipedie ...</a>
+</p>
+
+<div class="detaila_area">
+<details>
+  <summary>[1]</summary>
+  <div class="hidiv">
+		<form>
+		  <label for="text">Text field</label>
+		  <input type="text" id="text">
+
+		  <label for="email">Text field</label>
+		  <input type="email" id="email">
+
+		  <label for="number">Text field</label>
+		  <input type="number" id="number">
+
+		  <label for="date">Text field</label>
+		  <input type="date" id="date">
+
+		  <label for="url">Text field</label>
+		  <input type="url" id="url">
+
+		  <label for="password">Text field</label>
+		  <input type="password" id="password">
+
+		  <input type="range" id="range">
+
+		  <input type="radio" id="radio">
+		  <label for="range">Radio field</label>  
+
+		  <input type="checkbox" id="chk">
+		  <label for="chk">Checkbox field</label>
+
+		  <label for="textarea">Textarea field</label>
+		  <textarea id="textarea"></textarea>
+
+		  <label for="select">Select field</label>
+		  <select id="select">
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		  </select>
+
+		  <button type="submit">Submit</button>  
+		</form>  
+  </div>
+</details>
+<details>
+  <summary>[2]</summary>
+  <div class="hidiv">Toto je skrytý odstavec2.</div>
+</details>
+<details>
+  <summary>[3]</summary>
+  <div class="hidiv">Toto je skrytý odstavec3.</div>
+</details>
+<details>
+  <summary>[4]</summary>
+  <div class="hidiv">Toto je skrytý odstavec 004.</div>
+</details>
+</div>
+<!--
+			<ul>
+				<li>List element</li>
+				<li>List element</li>
+				<li>List element</li>
+				<li>List element
+					<ul>
+						<li>Sub-list element</li>
+						<li>Sub-list element</li>
+						<li>Sub-list element
+							<ul>
+								<li>Sub-sub-list element</li>
+								<li>Sub-sub-list element</li>
+								<li>Sub-sub-list element</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		
+-->
+		</div> <!-- div: main -->
+		<div id="bottom"></div>
+		<div class="footer">
+			<div class="footer-left">
+			  <a href="https://rwiki.robertjiranek.eu/doku.php?id=01-rjwiki:ict:projects:python:index">project</a>
+			</div>
+			<div class="footer-center">
+			&copy 2026,&nbsp;<span>Robert</span>
+			</div>
+			<div class="footer-right">
+			<a href="#top">top</a>
+			</div>
+
+		</div>	
+	</div>
+</body>
+</html>

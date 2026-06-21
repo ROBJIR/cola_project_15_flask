@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_name }}</title>
+</head>
+<body>
+    <div>
+        <a href='/'>home</a>
+    </div>
+    <h1>{{ page_name }}</h1>
+    <div>
+        {{ window_body }}
+    </div>
+    <form method="post">
+        <label>
+            <input type="text" maxlength="10"
+                   name="calculator_number1"
+                   value="{{ defval_number1 }}">
+        </label>
+        <label>
+            <input type="text" maxlength="1"
+                   name="calculator_operator"
+                   value="{{ defval_operator }}">
+        </label>
+        <label>
+            <input type="text" maxlength="10"
+                   name="calculator_number2"
+                   value="{{ defval_number2 }}">
+        </label>
+        <input type="submit">
+        <br>
+        <label>
+            result:
+            <input type="text" maxlength="10"
+                   name="calculator_result"
+                   value="{{ calculator_result }}">
+        </label>
+
+    </form>
+</body>
+</html>
