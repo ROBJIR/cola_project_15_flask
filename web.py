@@ -5,7 +5,7 @@ from random import randint, shuffle
 import datetime
 from  flask import Flask, render_template, request, redirect, url_for
 # My librares
-from lib.lib_database import Database
+from lib.lib_database_20 import Database
 
 cfg_project_main = {
  "project_name":"project 15-FLASK"
@@ -16,6 +16,7 @@ cfg_project_pages = [
  {"page_url":"/","page_name":"home","page_title":"home page for this project","location":"topmenu"}
 ,{"page_url":"/dbs/sysinfo/0","page_name":"database / sysinfo","page_title":"system informations from database","location":"buttonmenu"}
 ,{"page_url":"/dbs/syslog/0","page_name":"database / syslog","page_title":"system log in schema dbadm","location":"buttonmenu"}
+,{"page_url":"/mountains","page_name":"Mountains","page_title":"","location":"topmenu"}
 ,{"page_url":"/currentdatetime","page_name":"Current Date & Time","page_title":"","location":"hidden"}
 ,{"page_url":"/calculator","page_name":"Calculator","page_title":"mathematical operation between two factors","location":"hidden"}
 ,{"page_url":"/get_post","page_name":"get&post","page_title":"testing GET or POT methods","location":"hidden"}
@@ -27,53 +28,82 @@ message_detail = {
 ,"message_formated":""
 }
 
+
+class Webpage():
+    def __init__(self):
+        pass
+
+    def tablegenerator(self, data):
+        html = ""
+        html = f"{html}<table>\n"
+        html = f"{html}  <tr>\n"
+        for tabheader in data[0].keys():
+            html = f"{html}    <th>{tabheader}</th>\n"
+        html = f"{html}  </tr>\n"
+
+        for row in data:
+            html = f"{html}  <tr>\n"
+            for val in row.values():
+                html = f"{html}<td>{val}</td>\n"
+
+            html = f"{html}  </tr>\n"
+
+        html = f"{html}</table>\n"
+        # print(html)
+        
+        return html
+
+def html_status_set(status_text: str = "", status_code: str = "warning"):
+    match status_code.lower():
+        case "error":
+            status_text = f'<span style="color:#800;font-weight: bold;">{status_text}</span>'
+        case "warning":
+            status_text = f'<span style="color:#b8860b;font-weight: bold;">{status_text}</span>'
+        case _:
+            return status_text
+    return status_text
+
+
+def page_name_get(page_url, page_list=cfg_project_pages):
+    for page in page_list:
+        if page["page_url"] == page_url:
+            return page["page_name"]
+    return ""
+
+
+def html_message_set(message: str = "", message_type: str = "message"):
+    if message:
+        mtype = ""
+        if message_type.lower() != "message":
+            mtype = f"<strong>{message_type.upper()}</strong>:"
+        message_detail = {"message_type": f"{message_type.lower()}", "message_message": f"{message}",
+                          "message_formated": f'<div class="message_{message_type.lower()}">{mtype} {message}</div>'}
+    else:
+        message_detail = {"message_type": "", "message_message": "", "message_formated": ""}
+    return message_detail
+
+
+def html_menu_get(menu_type="topmenu", menu_list: list = cfg_project_pages):
+    menu = ""
+    for row in menu_list:
+        if menu_type.lower() in row["location"].lower():
+            row_menu = f'<a href="{row["page_url"]}" title="{row["page_title"]}">{row["page_name"]}</a>'
+            match menu_type.lower():
+                case "buttonmenu":
+                    pass
+                case "topmenu":
+                    row_menu = f'<li>{row_menu}</li>'
+                case _:
+                    pass
+            menu = f'{menu}{row_menu}\n'
+    return menu
+
 # main body
 try:
     dbs=Database()
     dbs.connect()
 
-    def html_status_set(status_text: str = "", status_code:str = "warning"):
-        match status_code.lower():
-            case "error":
-                status_text=f'<span style="color:#800;font-weight: bold;">{status_text}</span>'
-            case "warning":
-                status_text = f'<span style="color:#b8860b;font-weight: bold;">{status_text}</span>'
-            case _:
-                return status_text
-        return status_text
-
-    def page_name_get(page_url, page_list=cfg_project_pages):
-        for page in page_list:
-            if page["page_url"] == page_url:
-                return page["page_name"]
-        return ""
-
-    def html_message_set(message:str="",message_type:str="message"):
-        if  message:
-            mtype=""
-            if message_type.lower()!="message":
-                mtype = f"<strong>{message_type.upper()}</strong>:"
-            message_detail = {"message_type": f"{message_type.lower()}", "message_message": f"{message}",
-                              "message_formated": f'<div class="message_{message_type.lower()}">{mtype} {message}</div>'}
-        else:
-            message_detail = {"message_type": "", "message_message": "", "message_formated": ""}
-        return message_detail
-
-    def html_menu_get(menu_type="topmenu", menu_list: list=cfg_project_pages):
-        menu=""
-        for row in menu_list:
-            if menu_type.lower() in row["location"].lower():
-                row_menu=f'<a href="{row["page_url"]}" title="{row["page_title"]}">{row["page_name"]}</a>'
-                match menu_type.lower():
-                    case "buttonmenu":
-                        pass
-                    case "topmenu":
-                        row_menu = f'<li>{row_menu}</li>'
-                    case _:
-                        pass
-                menu = f'{menu}{row_menu}\n'
-        return menu
-
+    mainpage=Webpage()
     app = Flask(__name__)
 
     message_detail=html_message_set()
@@ -84,21 +114,22 @@ try:
         html_body = ""
         match action.lower():
             case "sysinfo":
-                sysinfo=dbs.dbadm_database_info_show()
+                sysinfo=dbs.sys_database_info_show()
                 for key, value in sysinfo.items():
                     html_body=f'{html_body}<tr><td style="width:15%;text-align:right;font-size:0.8em;">{key}: </td><td style="width:85%;"><strong>{value}<strong></td></tr>\n'
                 html_body=f'<table>\n{html_body}\n</table>'
             case "syslog":
-                data=dbs.execute_sqlcommand("SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,parameter,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC")
+                data=dbs.execute_sqlcommand("SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC",False, "NO")
                 for row in data:
                     err_msg=''
-                    if row["error_number"] != 0:
-                        err_msg = f'<tr><td>&nbsp;</td><td style="text-align:right;font-size: 0.8em;"><i>error:</i></td><td colspan="3" style="color:#800">{html_status_set("["+str(row["error_number"])+"] - "+row["error_message"],"error")}</td></tr>\n'
+                    #if row["error_number"] != 0:
+                    #   err_msg = f'<tr><td>&nbsp;</td><td style="text-align:right;font-size: 0.8em;"><i>error:</i></td><td colspan="3" style="color:#800">{html_status_set("["+str(row["error_number"])+"] - "+row["error_message"],"error")}</td></tr>\n'
                     html_body=f'''
                                 {html_body}<tr><td style="text-align:center;" rowspan="2">{row["id"]}<br><a href="/dbs/syslogdelid/{row["id"]}" style="font-size: 0.8em;">[del]</a></td>
                                 <td>{html_status_set(row["status_code"],row["status_code"])}</td><td>{row["timepoint_date"]}&nbsp;{row["timepoint_time"]}</td><td>{row["modul_code"]}</td>
                                 <td style="text-align:center;" rowspan="2">{row["sid"]}<br><a href="/dbs/syslogdelsid/{row["sid"]}" style="font-size: 0.8em;">[del]</a></td></tr>\n
-                                <tr><td style="text-align:right;font-size: 0.8em;"><i>parameter:</i></td><td colspan="2">{row["parameter"]}</td></tr>\n
+                                <tr><td style="text-align:right;font-size: 0.8em;"><i>message:</i></td><td colspan="2">{row["message"]}</td></tr>\n
+                                <tr><td>&nbsp;</td><td style="text-align:right;font-size: 0.8em;"><i>parameter:</i></td><td colspan="2">{row["parameters"]}</td></tr>\n
                                 <tr><td>&nbsp;</td><td style="text-align:right;font-size: 0.8em;"><i>command:</i></td><td colspan="3">{row["sql_command"]}</td></tr>\n
                                 {err_msg}\n
                                 <tr><td colspan="5"><div style="border-top:0;border-right:0;border-bottom:1px solid #999;border-left:0;height:2px;">&nbsp;</div></td></tr>
@@ -150,7 +181,19 @@ try:
                                , html_menu_button=html_menu_get(menu_type="buttonmenu", menu_list=cfg_project_pages)
                                )
 
-
+    @app.route("/mountains")
+    def mountains():
+        cfg_project_main["project_page_name"] = page_name_get(page_url=request.path, page_list=cfg_project_pages)
+        data = dbs.execute_sqlcommand(
+            "SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;")
+        html_body = mainpage.tablegenerator(data);
+        return render_template("rjdesign.html"
+                               , html_project_detail=cfg_project_main
+                               , html_body=html_body
+                               , html_message_detail=message_detail
+                               , html_menu_top=html_menu_get(menu_type="topmenu", menu_list=cfg_project_pages)
+                               , html_menu_button=html_menu_get(menu_type="buttonmenu", menu_list=cfg_project_pages)
+                               )
     @app.route("/currentdatetime")
     def current_date_time():
         cfg_project_main["project_page_name"] = page_name_get(page_url=request.path, page_list=cfg_project_pages)

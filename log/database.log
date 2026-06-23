@@ -1,0 +1,551 @@
+2026-06-23 12:38:43,058 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:40:18,881 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:40:18,887 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5151
+2026-06-23 12:40:18,896 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:40:18,904 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries FROM alpha.mountain_8000 WHERE ranking<3 ORDER BY ranking
+2026-06-23 12:40:18,908 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 12:41:34,940 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:41:34,946 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5155
+2026-06-23 12:41:34,954 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:41:35,004 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-23 12:41:35,004 INFO: [33mPress CTRL+C to quit[0m
+2026-06-23 12:41:35,006 INFO:  * Restarting with stat
+2026-06-23 12:41:35,630 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:41:35,637 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5156
+2026-06-23 12:41:35,648 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:41:35,673 WARNING:  * Debugger is active!
+2026-06-23 12:41:35,675 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 12:41:43,296 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:43] "GET / HTTP/1.1" 200 -
+2026-06-23 12:41:43,579 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:43] "GET /static/css/rjdesign/style.css HTTP/1.1" 200 -
+2026-06-23 12:41:43,616 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:43] "GET /static/css/rjdesign/menu.css HTTP/1.1" 200 -
+2026-06-23 12:41:43,655 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-23 12:41:44,621 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:44] "GET / HTTP/1.1" 200 -
+2026-06-23 12:41:44,641 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:44] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:41:44,872 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:44] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:41:45,953 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 12:41:45,959 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:45] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 12:41:46,035 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:46] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:41:46,202 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:46] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:41:49,276 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:49] "GET / HTTP/1.1" 200 -
+2026-06-23 12:41:49,578 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:49] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:41:49,604 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:49] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:41:52,819 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:52] "GET /dbs/sysinfo/0 HTTP/1.1" 200 -
+2026-06-23 12:41:52,949 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:52] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:41:53,072 INFO: 127.0.0.1 - - [23/Jun/2026 12:41:53] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:42:03,783 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:42:03,817 INFO: 127.0.0.1 - - [23/Jun/2026 12:42:03] "[35m[1mGET /dbs/syslog/0 HTTP/1.1[0m" 500 -
+2026-06-23 12:42:04,100 INFO: 127.0.0.1 - - [23/Jun/2026 12:42:04] "GET /dbs/syslog/0?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-06-23 12:42:04,182 INFO: 127.0.0.1 - - [23/Jun/2026 12:42:04] "GET /dbs/syslog/0?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-06-23 12:42:04,535 INFO: 127.0.0.1 - - [23/Jun/2026 12:42:04] "GET /dbs/syslog/0?__debugger__=yes&cmd=resource&f=console.png&s=78C3t4n0dLo1qxfjZEi7 HTTP/1.1" 200 -
+2026-06-23 12:42:04,781 INFO: 127.0.0.1 - - [23/Jun/2026 12:42:04] "GET /dbs/syslog/0?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-06-23 12:44:47,179 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 12:44:47,285 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 12:44:48,674 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:44:48,680 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5163
+2026-06-23 12:44:48,689 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:44:48,732 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-23 12:44:48,733 INFO: [33mPress CTRL+C to quit[0m
+2026-06-23 12:44:48,735 INFO:  * Restarting with stat
+2026-06-23 12:44:49,379 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:44:49,385 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5164
+2026-06-23 12:44:49,395 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:44:49,419 WARNING:  * Debugger is active!
+2026-06-23 12:44:49,421 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 12:44:56,818 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:44:56,839 INFO: 127.0.0.1 - - [23/Jun/2026 12:44:56] "[35m[1mGET /dbs/syslog/0 HTTP/1.1[0m" 500 -
+2026-06-23 12:44:56,932 INFO: 127.0.0.1 - - [23/Jun/2026 12:44:56] "[36mGET /dbs/syslog/0?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:44:57,193 INFO: 127.0.0.1 - - [23/Jun/2026 12:44:57] "[36mGET /dbs/syslog/0?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-06-23 12:44:57,511 INFO: 127.0.0.1 - - [23/Jun/2026 12:44:57] "GET /dbs/syslog/0?__debugger__=yes&cmd=resource&f=console.png&s=zmZ1mcV3WieDk8IUziU8 HTTP/1.1" 200 -
+2026-06-23 12:45:11,960 INFO:  * Detected change in 'D:\\60-projects\\Gdisk\\COLA-CodersLab\\ONL_PYT_W_6358\\projects\\cola_project_15_flask\\web.py', reloading
+2026-06-23 12:45:12,072 INFO:  * Restarting with stat
+2026-06-23 12:45:12,717 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:45:12,723 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5169
+2026-06-23 12:45:12,732 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:45:12,758 WARNING:  * Debugger is active!
+2026-06-23 12:45:12,760 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 12:45:21,652 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:45:21,664 INFO: 127.0.0.1 - - [23/Jun/2026 12:45:21] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:45:21,716 INFO: 127.0.0.1 - - [23/Jun/2026 12:45:21] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:45:21,899 INFO: 127.0.0.1 - - [23/Jun/2026 12:45:21] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:46:15,573 INFO:  * Detected change in 'D:\\60-projects\\Gdisk\\COLA-CodersLab\\ONL_PYT_W_6358\\projects\\cola_project_15_flask\\web.py', reloading
+2026-06-23 12:46:15,663 INFO:  * Restarting with stat
+2026-06-23 12:46:16,335 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:46:16,341 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5172
+2026-06-23 12:46:16,349 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:46:16,375 WARNING:  * Debugger is active!
+2026-06-23 12:46:16,377 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 12:46:16,416 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:46:16,430 INFO: 127.0.0.1 - - [23/Jun/2026 12:46:16] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:46:16,490 INFO: 127.0.0.1 - - [23/Jun/2026 12:46:16] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:46:16,564 INFO: 127.0.0.1 - - [23/Jun/2026 12:46:16] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:46:50,177 INFO:  * Detected change in 'D:\\60-projects\\Gdisk\\COLA-CodersLab\\ONL_PYT_W_6358\\projects\\cola_project_15_flask\\web.py', reloading
+2026-06-23 12:46:50,266 INFO:  * Restarting with stat
+2026-06-23 12:46:50,814 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:46:50,820 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5175
+2026-06-23 12:46:50,829 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:46:50,855 WARNING:  * Debugger is active!
+2026-06-23 12:46:50,857 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 12:46:51,448 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:46:51,461 INFO: 127.0.0.1 - - [23/Jun/2026 12:46:51] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:46:51,524 INFO: 127.0.0.1 - - [23/Jun/2026 12:46:51] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:46:51,696 INFO: 127.0.0.1 - - [23/Jun/2026 12:46:51] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:14,643 INFO: cassiopeiadb: database.execute_sqlcommand  - TRUNCATE TABLE dbadm.sys_log
+--- parameters ----------------------------------
+commit/finalcommit is true/true - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+TRUNCATE TABLE dbadm.sys_log
+2026-06-23 12:47:14,650 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:14] "POST /dbs/syslogtrunc/0 HTTP/1.1" 200 -
+2026-06-23 12:47:14,674 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:14] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:14,872 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:14] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:16,671 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:47:16,676 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:16] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:47:16,699 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:16] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:16,918 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:16] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:22,582 INFO: cassiopeiadb: database.execute_sqlcommand  - DELETE FROM dbadm.sys_log WHERE sid = 5175
+--- parameters ----------------------------------
+commit/finalcommit is true/true - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+DELETE FROM dbadm.sys_log WHERE sid = 5175
+2026-06-23 12:47:22,589 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:22] "GET /dbs/syslogdelsid/5175 HTTP/1.1" 200 -
+2026-06-23 12:47:22,756 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:22] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:22,828 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:22] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:23,701 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:47:23,707 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:23] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:47:24,001 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:24] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:24,034 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:24] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:26,408 INFO: cassiopeiadb: database.execute_sqlcommand  - DELETE FROM dbadm.sys_log WHERE id = 104
+--- parameters ----------------------------------
+commit/finalcommit is true/true - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+DELETE FROM dbadm.sys_log WHERE id = 104
+2026-06-23 12:47:26,414 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:26] "GET /dbs/syslogdelid/104 HTTP/1.1" 200 -
+2026-06-23 12:47:26,532 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:26] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:26,651 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:26] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:27,666 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:47:27,672 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:27] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:47:27,969 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:27] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:47:28,000 INFO: 127.0.0.1 - - [23/Jun/2026 12:47:27] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:48:23,006 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 12:48:23,011 INFO: 127.0.0.1 - - [23/Jun/2026 12:48:23] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 12:48:23,117 INFO: 127.0.0.1 - - [23/Jun/2026 12:48:23] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:48:23,256 INFO: 127.0.0.1 - - [23/Jun/2026 12:48:23] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:48:28,529 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepo...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT TO_CHAR(timepoint, 'YYYY-MM-DD') timepoint_date,TO_CHAR(timepoint, 'HH24:MI:SS') timepoint_time,sid,modul_code,message,parameters,status_code,sql_command,error_number,error_message,id FROM dbadm.sys_log ORDER BY timepoint DESC
+2026-06-23 12:48:28,535 INFO: 127.0.0.1 - - [23/Jun/2026 12:48:28] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:48:28,829 INFO: 127.0.0.1 - - [23/Jun/2026 12:48:28] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:48:28,861 INFO: 127.0.0.1 - - [23/Jun/2026 12:48:28] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:33,550 INFO:  * Detected change in 'D:\\60-projects\\Gdisk\\COLA-CodersLab\\ONL_PYT_W_6358\\projects\\cola_project_15_flask\\web.py', reloading
+2026-06-23 12:49:33,646 INFO:  * Restarting with stat
+2026-06-23 12:49:34,251 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 12:49:34,256 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 5183
+2026-06-23 12:49:34,264 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 12:49:34,287 WARNING:  * Debugger is active!
+2026-06-23 12:49:34,289 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 12:49:39,877 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:39] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:49:39,931 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:39] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:40,117 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:40] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:46,059 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 12:49:46,065 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:46] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 12:49:46,238 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:46] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:46,308 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:46] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:49,814 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:49] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:49:50,112 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:50] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:50,140 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:50] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:51,473 INFO: cassiopeiadb: database.execute_sqlcommand  - TRUNCATE TABLE dbadm.sys_log
+--- parameters ----------------------------------
+commit/finalcommit is true/true - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+TRUNCATE TABLE dbadm.sys_log
+2026-06-23 12:49:51,480 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:51] "POST /dbs/syslogtrunc/0 HTTP/1.1" 200 -
+2026-06-23 12:49:51,504 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:51] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:51,702 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:51] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:53,170 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:53] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:49:53,195 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:53] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:53,419 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:53] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:58,902 INFO: cassiopeiadb: database.execute_sqlcommand  - DELETE FROM dbadm.sys_log WHERE id = 114
+--- parameters ----------------------------------
+commit/finalcommit is true/true - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+DELETE FROM dbadm.sys_log WHERE id = 114
+2026-06-23 12:49:58,909 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:58] "GET /dbs/syslogdelid/114 HTTP/1.1" 200 -
+2026-06-23 12:49:59,034 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:59] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:49:59,146 INFO: 127.0.0.1 - - [23/Jun/2026 12:49:59] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:00,100 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:00] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:00,402 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:00] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:00,427 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:00] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:05,584 INFO: cassiopeiadb: database.execute_sqlcommand  - TRUNCATE TABLE dbadm.sys_log
+--- parameters ----------------------------------
+commit/finalcommit is true/true - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+TRUNCATE TABLE dbadm.sys_log
+2026-06-23 12:50:05,592 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:05] "POST /dbs/syslogtrunc/0 HTTP/1.1" 200 -
+2026-06-23 12:50:05,618 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:05] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:05,816 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:05] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:06,934 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:06] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:06,959 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:06] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:07,213 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:07] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:11,337 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:11] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:11,359 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:11] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:11,586 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:11] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:15,742 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:15] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:15,870 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:15] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:15,991 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:15] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:18,353 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:18] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:18,656 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:18] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:18,683 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:18] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:19,386 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:19] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:19,408 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:19] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:19,637 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:19] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:20,169 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:20] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:20,192 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:20] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:20,419 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:20] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:20,536 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:20] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:20,862 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:20] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:20,862 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:20] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:21,113 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:21] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:21,361 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:21] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:21,437 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:21] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:21,959 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 12:50:21,966 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:21] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 12:50:22,323 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:22] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:22,325 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:22] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:25,988 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:25] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 12:50:26,135 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:26] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:26,237 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:26] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:37,550 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 12:50:37,557 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:37] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 12:50:37,851 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:37] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:37,885 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:37] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:52,676 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 12:50:52,683 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:52] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 12:50:52,814 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:52] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 12:50:52,913 INFO: 127.0.0.1 - - [23/Jun/2026 12:50:52] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 12:51:28,561 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 12:51:28,673 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:08:49,664 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:08:49,684 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3324
+2026-06-23 22:08:49,693 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:08:49,728 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-23 22:08:49,728 INFO: [33mPress CTRL+C to quit[0m
+2026-06-23 22:08:49,730 INFO:  * Restarting with stat
+2026-06-23 22:08:50,286 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:08:50,291 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3325
+2026-06-23 22:08:50,299 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:08:50,321 WARNING:  * Debugger is active!
+2026-06-23 22:08:50,323 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 22:08:55,890 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:55] "GET / HTTP/1.1" 200 -
+2026-06-23 22:08:56,170 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:08:56,203 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "GET / HTTP/1.1" 200 -
+2026-06-23 22:08:56,204 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:08:56,233 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "GET / HTTP/1.1" 200 -
+2026-06-23 22:08:56,517 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:08:56,563 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:08:56,566 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "GET / HTTP/1.1" 200 -
+2026-06-23 22:08:56,615 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:08:56,917 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:56] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:08:57,228 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-23 22:08:58,784 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 22:08:58,791 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:58] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 22:08:59,097 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:59] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:08:59,121 INFO: 127.0.0.1 - - [23/Jun/2026 22:08:59] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:09:37,366 INFO:  * Detected change in 'D:\\60-projects\\Gdisk\\COLA-CodersLab\\ONL_PYT_W_6358\\projects\\cola_project_15_flask\\web.py', reloading
+2026-06-23 22:09:37,457 INFO:  * Restarting with stat
+2026-06-23 22:09:38,010 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:09:38,014 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3328
+2026-06-23 22:09:38,022 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:09:38,044 WARNING:  * Debugger is active!
+2026-06-23 22:09:38,045 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 22:09:41,557 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 22:09:41,567 INFO: 127.0.0.1 - - [23/Jun/2026 22:09:41] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 22:09:41,703 INFO: 127.0.0.1 - - [23/Jun/2026 22:09:41] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:09:41,802 INFO: 127.0.0.1 - - [23/Jun/2026 22:09:41] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:10:31,028 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:10:31,123 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:10:32,150 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:10:32,161 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3334
+2026-06-23 22:10:32,170 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:10:32,216 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-23 22:10:32,216 INFO: [33mPress CTRL+C to quit[0m
+2026-06-23 22:10:32,218 INFO:  * Restarting with stat
+2026-06-23 22:10:32,805 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:10:32,812 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3335
+2026-06-23 22:10:32,822 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:10:32,845 WARNING:  * Debugger is active!
+2026-06-23 22:10:32,847 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 22:10:34,853 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 22:10:34,871 INFO: 127.0.0.1 - - [23/Jun/2026 22:10:34] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 22:10:34,980 INFO: 127.0.0.1 - - [23/Jun/2026 22:10:34] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:10:35,097 INFO: 127.0.0.1 - - [23/Jun/2026 22:10:35] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:11:24,446 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:11:24,553 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:11:25,338 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:11:25,344 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3339
+2026-06-23 22:11:25,353 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:11:25,394 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-23 22:11:25,394 INFO: [33mPress CTRL+C to quit[0m
+2026-06-23 22:11:25,396 INFO:  * Restarting with stat
+2026-06-23 22:11:25,991 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:11:25,997 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3340
+2026-06-23 22:11:26,006 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:11:26,028 WARNING:  * Debugger is active!
+2026-06-23 22:11:26,029 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 22:11:28,381 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 22:11:28,393 INFO: 127.0.0.1 - - [23/Jun/2026 22:11:28] "[35m[1mGET /mountains HTTP/1.1[0m" 500 -
+2026-06-23 22:11:28,448 INFO: 127.0.0.1 - - [23/Jun/2026 22:11:28] "GET /mountains?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-06-23 22:11:28,625 INFO: 127.0.0.1 - - [23/Jun/2026 22:11:28] "GET /mountains?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-06-23 22:11:28,964 INFO: 127.0.0.1 - - [23/Jun/2026 22:11:28] "GET /mountains?__debugger__=yes&cmd=resource&f=console.png&s=sxSNL23z0XGsQhaDtguZ HTTP/1.1" 200 -
+2026-06-23 22:11:29,216 INFO: 127.0.0.1 - - [23/Jun/2026 22:11:29] "GET /mountains?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-06-23 22:12:05,512 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:12:05,609 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:12:06,399 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:12:06,405 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3343
+2026-06-23 22:12:06,415 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:12:06,458 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-23 22:12:06,458 INFO: [33mPress CTRL+C to quit[0m
+2026-06-23 22:12:06,460 INFO:  * Restarting with stat
+2026-06-23 22:12:07,165 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:12:07,172 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3344
+2026-06-23 22:12:07,182 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:12:07,203 WARNING:  * Debugger is active!
+2026-06-23 22:12:07,204 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 22:12:14,385 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:12:14,478 INFO: cassiopeiadb: database.close  - close database cassiopeiadb
+2026-06-23 22:12:15,217 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:12:15,222 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3345
+2026-06-23 22:12:15,235 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:12:15,276 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-23 22:12:15,277 INFO: [33mPress CTRL+C to quit[0m
+2026-06-23 22:12:15,278 INFO:  * Restarting with stat
+2026-06-23 22:12:15,879 INFO: cassiopeiadb: database.connect  - connected to cassiopeiadb database
+2026-06-23 22:12:15,884 INFO: cassiopeiadb: database.connect  - connection details
+database_connection = cassiopeia
+database = postgresql
+host:port = 192.168.56.1:5432
+database_name = cassiopeiadb
+username = cassiopeia
+session ID = 3346
+2026-06-23 22:12:15,891 INFO: cassiopeiadb: database.schema_set  - SET search_path TO dbadm
+2026-06-23 22:12:15,915 WARNING:  * Debugger is active!
+2026-06-23 22:12:15,916 INFO:  * Debugger PIN: 874-519-988
+2026-06-23 22:12:18,992 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:18] "GET /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 22:12:19,136 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:19] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:12:19,216 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:19] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:12:21,239 INFO: cassiopeiadb: database.execute_sqlcommand  - TRUNCATE TABLE dbadm.sys_log
+--- parameters ----------------------------------
+commit/finalcommit is true/true - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+TRUNCATE TABLE dbadm.sys_log
+2026-06-23 22:12:21,246 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:21] "POST /dbs/syslogtrunc/0 HTTP/1.1" 200 -
+2026-06-23 22:12:21,513 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:21] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:12:21,641 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:21] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:12:23,500 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:23] "POST /dbs/syslog/0 HTTP/1.1" 200 -
+2026-06-23 22:12:23,526 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:23] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:12:23,745 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:23] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
+2026-06-23 22:12:27,508 INFO: cassiopeiadb: database.execute_sqlcommand  - SELECT ranking, mountain_name, elevation_meters, mountain_range, coun...
+--- parameters ----------------------------------
+commit/finalcommit is true/false - logging is auto - set dbadm_logging_sqlcommand is True
+--- sqlcommand ----------------------------------
+SELECT ranking, mountain_name, elevation_meters, mountain_range, countries, id FROM alpha.mountain_8000;
+2026-06-23 22:12:27,525 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:27] "GET /mountains HTTP/1.1" 200 -
+2026-06-23 22:12:27,610 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:27] "[36mGET /static/css/rjdesign/style.css HTTP/1.1[0m" 304 -
+2026-06-23 22:12:27,757 INFO: 127.0.0.1 - - [23/Jun/2026 22:12:27] "[36mGET /static/css/rjdesign/menu.css HTTP/1.1[0m" 304 -
