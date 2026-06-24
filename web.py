@@ -43,8 +43,14 @@ class Webpage():
 
         for row in data:
             html = f"{html}  <tr>\n"
-            for val in row.values():
-                html = f"{html}<td>{val}</td>\n"
+            for ikey,ivalue in row.items():
+                match ikey:
+                    case "mountain_name":
+                        html = f"{html}    <td><strong>{ivalue}</strong></td>\n"
+                    case "elevation_meters":
+                        html = f"{html}    <td><strong>{ivalue:,}&nbsp;m.n.m.</strong></td>\n".replace(",","&nbsp;")
+                    case _:
+                        html = f"{html}    <td>{ivalue}</td>\n"
 
             html = f"{html}  </tr>\n"
 
