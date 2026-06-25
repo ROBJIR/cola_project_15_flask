@@ -136,6 +136,7 @@ details {
 
 form {
 	text-align: center;
+	width: 100%;
 	background: #fff;
 	font-family: sans-serif;
 	flex-direction: column;
@@ -156,21 +157,20 @@ form {
 
 label {
 	display: block;
-	padding-bottom: 10px;
+	padding-top: 10px;
 }
 input[type=text],
+input[type=number],
 input[type=email],
 textarea {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 	box-sizing: border-box;
 	display: block;
 	padding:15px;
 	border:1px solid #aaa;
 	box-shadow: inset 0 2px 2px rgba(0,0,0,.1);
-	width: 500px;
-}
-textarea {
-	height: 140px;
+	width: 100%;
 }
 button {
 	background: #666;
@@ -239,7 +239,7 @@ a:active {
 table {
 	border: 0px solid #800;
 	width: 100%;
-	font-size: 0.8em;
+	font-size: 1.0em;
 	color: #800;
 	background: #fff;
 	padding: 0px;
@@ -250,18 +250,32 @@ tr {
 	margin: 0px;
 }
 th {
-	border: 0px solid #800;
 	font-size: 0.8em;
-	font-weight: normal;
-	color: #800;
-	background: #ddd;
+	font-weight: bold;
+	color: #333;
+	background: #eee;
 	padding: 4px;
 	margin: 0px;
 	border-top:    0;
     border-right:  0;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #333;
     border-left:   0;
 }
+
+th.detail {
+	font-size: 0.8em;
+	font-weight: normal;
+	text-align: right;
+	background: #fff;
+	color: #333
+	padding: 4px;
+	margin: 0px;
+	border-top:    0;
+    border-right:  1px solid #333;
+    border-bottom: 0;
+    border-left:   0;
+}
+
 td {
 	border: 0px solid #800;
 	font-size: 1.oem;
@@ -271,6 +285,18 @@ td {
 	margin: 0px;
 	vertical-align: top;
 }
+
+td.detail {
+	border: 0px solid #800;
+	font-size: 1.oem;
+	color: #000;
+	background: #fff;
+	padding: 4px;
+	margin: 0px;
+	vertical-align: top;
+	font-weight: bold;
+}
+
 title {
 	border: 1px solid #999;
 	font-size: 10px;

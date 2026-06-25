@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ html_project_detail["project_name"] }} / {{ html_project_detail["project_page_name"] }}</title>
+    <title>{{ html_web["web_name"] }} / {{ html_page["page_name"] }}</title>
 
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/rjdesign/style.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/rjdesign/menu.css') }}">
@@ -14,7 +14,7 @@
 	<div class="wrapper">
 		<header class="header">
 				<div class="header-left">
-					<p class="title">{{ html_project_detail["project_name"] }}</p>
+					<p class="title">{{ html_web["web_name"] }}</p>
 				</div>
 				<div class="header-center">
 					&nbsp;
@@ -36,26 +36,23 @@
 			</ul>
 		</div>		
 		<div class="main">
-<!--		
-			<div class="form">
-				<form>
 
-				</form>
-			</div>
--->
-			<h1>{{ html_project_detail["project_page_name"] }}</h1>
-					{{ html_message_detail["message_formated"]|safe }}
+			<h1>{{ html_page["page_name"] }}</h1>
 			<div>
-					{{ html_body|safe }}
+					{{ html_page["page_message"]|safe }}
 			</div>
-		</div> <!-- div: main -->
+			<div>
+					{{ html_page["page_body"]|safe }}
+			</div>
+		</div>
+
 		<div id="bottom"></div>
 		<div class="footer">
 			<div class="footer-left">
 			  <a href="https://rwiki.robertjiranek.eu/doku.php?id=01-rjwiki:ict:projects:python:index" target="_blank" title="rwiki.robertjiranek.eu">project</a>
 			</div>
 			<div class="footer-center">
-			&copy 2026,&nbsp;<span>Robert for ONL_PYT_W_6358</span>
+			&copy 2026,&nbsp;<span>robert.jiranek@gmail.com<br>created for ONL_PYT_W_6358</span>
 			</div>
 			<div class="footer-right">
 			<a href="#top">top</a>
